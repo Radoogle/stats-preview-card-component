@@ -169,4 +169,16 @@ footer {
     width: 100%;
     display: inline-block;
   }
+
+  h1 {
+    font-size: 3.875em;
+  }
+
+  .hero-text {
+    font-size: 2em;
+  }
+
+  .stats {
+    font-size: 1.5em;
+  }
 }
