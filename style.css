@@ -141,6 +141,7 @@ footer {
   }
 
   .container {
+    margin: 10rem auto;
     grid-template-columns: 50% 50%;
     grid-template-areas:
       "hero img"
