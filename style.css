@@ -16,11 +16,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-primary);
   color: var(--clr-neutral-400);
@@ -29,12 +29,6 @@ body {
 
 ul {
   list-style-type: none;
-}
-
-ul,
-li {
-  margin: 0;
-  padding: 0;
 }
 
 li {
@@ -53,8 +47,8 @@ img {
 h1,
 .stats-heading {
   color: var(--clr-neutral-500);
-  line-height: 1.2;
-  font-size: 1.875em;
+  font-size: 1.5em;
+  margin-bottom: 0.65em;
 }
 
 .desktop {
@@ -62,7 +56,7 @@ h1,
 }
 
 .stats-heading {
-  font-size: 1.65em;
+  font-size: 1.5em;
   font-family: var(--ff-primary);
   font-weight: 700;
 }
@@ -71,9 +65,7 @@ h1,
   color: var(--clr-neutral-300);
   text-transform: uppercase;
   font-family: var(--ff-secondary);
-  font-size: 0.8em;
   margin-top: 0.5em;
-  letter-spacing: 1.5px;
 }
 
 li:last-of-type .stats-heading {
@@ -86,13 +78,12 @@ li:last-of-type .stats-heading {
 
 .hero-text {
   color: var(--clr-neutral-400);
-  line-height: 2;
   opacity: 0.75;
 }
 
 .container {
   background-color: var(--clr-primary-700);
-  max-width: 87%;
+  max-width: 75%;
   margin: 5.5rem auto;
   border-radius: 0.5em;
   overflow: hidden;
@@ -109,7 +100,7 @@ li:last-of-type .stats-heading {
   grid-area: img;
 }
 
-.img-container::before {
+.img-wrapper::before {
   content: "";
   background-color: var(--clr-primary-400);
   height: 100%;
@@ -120,7 +111,7 @@ li:last-of-type .stats-heading {
 }
 
 .hero {
-  padding: 1em 2em;
+  padding: 1em 1.65em 0;
   text-align: center;
   grid-area: hero;
 }
@@ -129,33 +120,19 @@ footer {
   margin: 3em 1em 1em;
   text-align: center;
   grid-area: footer;
+  font-size: 0.75em;
 }
 
-@media (min-width: 376px) {
-  .desktop {
-    display: inline;
+@media (min-width: 600px) {
+  .img-container {
+    display: block;
+    margin: 0 auto;
   }
-
-  .mobile {
-    display: none;
-  }
-
-  .container {
-    margin: 10rem auto;
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-      "hero img"
-      "footer footer";
-  }
-
-  .hero {
-    padding: 2em 4em;
-    text-align: left;
-  }
-
   ul {
     width: 90%;
-    text-align: justify; /* for this to work we need the after pseudo element */
+    margin: 0 auto;
+    text-align: justify;
+    /* for this to work we need the after pseudo element */
   }
 
   li {
@@ -169,16 +146,36 @@ footer {
     width: 100%;
     display: inline-block;
   }
+}
+
+@media (min-width: 1115px) {
+  .desktop {
+    display: inline;
+  }
+
+  .mobile {
+    display: none;
+  }
 
   h1 {
-    font-size: 3.875em;
+    font-size: 2.5em;
+  }
+
+  .container {
+    margin: 10rem auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "hero img"
+      "footer footer";
+  }
+
+  .hero {
+    padding: 4em 4.5em 0;
+    text-align: left;
   }
 
   .hero-text {
-    font-size: 2em;
-  }
-
-  .stats {
-    font-size: 1.5em;
+    line-height: 1.8;
+    padding: 0 2em 0 0;
   }
 }

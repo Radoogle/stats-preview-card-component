@@ -7,6 +7,9 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Stats preview card component</title>
 </head>
@@ -15,8 +18,14 @@
   <main>
     <div class="container">
       <div class="img-container">
-        <img src="./images/image-header-mobile.jpg" alt="" class="hero-img mobile">
-        <img src="./images/image-header-desktop.jpg" alt="" class="hero-img desktop">
+        <div class="img-wrapper mobile">
+          <img src="./images/image-header-mobile.jpg" alt="" class="hero-img">
+        </div>
+        <div class="img-wrapper desktop">
+          <img src="./images/image-header-desktop.jpg" alt="" class="hero-img">
+        </div>
+        
+        
       </div>
 
       <div class="hero">
@@ -48,7 +57,7 @@
     </div> <!-- close container-->
   </main>
 
-
+ 
 </body>
 
 </html>
